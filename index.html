@@ -41,7 +41,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            padding: 20px;
         }
 
         .header {
@@ -64,19 +63,30 @@
             100% { background-position: 100%; }
         }
 
-        .monologue-box {
-            margin-top: 100px;
+        .monologue-section {
+            position: absolute;
+            top: 35%;
+            left: 35%;
             text-align: center;
         }
 
-        .monologue-count {
+        .monologue-box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .monologue-text {
+            margin-top: 20px;
             font-size: 18px;
-            margin-top: 10px;
         }
 
         .monologue-button {
-            display: block;
-            margin: 20px auto;
+            margin-top: 20px;
             padding: 10px 20px;
             font-size: 18px;
             color: #e0e0e0;
@@ -99,11 +109,11 @@
     <div class="main-content">
         <div class="header">
             <div class="googol-layers">Googol Layers</div>
-            <div class="monologue-box">
-                <div class="monologue-count">10</div>
-                <div class="monologue-text">You have <span id="monologueCount">0</span> amount of Monologue</div>
-                <button class="monologue-button" onclick="addMonologue()">Get 1 more Monologue</button>
-            </div>
+        </div>
+        <div class="monologue-section">
+            <div class="monologue-box">10</div>
+            <div class="monologue-text">You have <span id="monologueCount">0</span> amount of Monologue</div>
+            <button class="monologue-button" onclick="addMonologue()">Get 1 more Monologue</button>
         </div>
     </div>
 
